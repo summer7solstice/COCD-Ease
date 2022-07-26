@@ -10,7 +10,7 @@
 #define Colors_h
 
 #define HexColor(__string)  [UIColor colorWithHexString:__string]
-#define kColor_Main         [UIColor colorWithHexString:@"#006A2C"]
+#define kColor_Main         [UIColor colorWithHexString:@"#1892FA"]
 #define kColor_Main_New     [UIColor colorWithHexString:@"#65AE75"]
 #define kColor_Disabled     kColor_Line
 #define kColor_Gray         [UIColor colorWithHexString:@"#999999"]

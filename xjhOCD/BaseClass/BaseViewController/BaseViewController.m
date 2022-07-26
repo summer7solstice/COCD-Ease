@@ -23,7 +23,7 @@
 /* common initialize */
 - (void)commonInitialize
 {
-    self.view.backgroundColor = kColor_BG;
+    self.view.backgroundColor = UIColor.whiteColor;
     
     if (![self isNavigationRootViewController]) {
         UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -32,8 +32,8 @@
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
         [backButton addTarget:self action:@selector(backButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
-    [self addBgLayer];
-    [self setNavigationBarHidden:YES];
+//    [self addBgLayer];
+
 }
 - (void)addBgLayer
 {

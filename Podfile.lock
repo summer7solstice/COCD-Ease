@@ -1,4 +1,5 @@
 PODS:
+  - AAChartKit (7.0.0)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -14,6 +15,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - FSCalendar (2.8.4)
   - LookinServer (1.0.2)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
@@ -24,44 +26,60 @@ PODS:
   - ReactiveCocoa/no-arc (2.5.2)
   - ReactiveCocoa/UI (2.5.2):
     - ReactiveCocoa/Core
+  - Realm (10.28.2):
+    - Realm/Headers (= 10.28.2)
+  - Realm/Headers (10.28.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - AAChartKit (from `https://github.com/AAChartModel/AAChartKit.git`)
   - BlocksKit
+  - FSCalendar
   - LookinServer
   - Masonry
   - MBProgressHUD
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
+  - Realm
   - YYKit
 
 SPEC REPOS:
   trunk:
     - BlocksKit
+    - FSCalendar
     - LookinServer
     - Masonry
     - MBProgressHUD
+    - Realm
     - YYKit
 
 EXTERNAL SOURCES:
+  AAChartKit:
+    :git: https://github.com/AAChartModel/AAChartKit.git
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
 
 CHECKOUT OPTIONS:
+  AAChartKit:
+    :commit: de5edecae0b796d0e00cccd743c94b3f7acf498d
+    :git: https://github.com/AAChartModel/AAChartKit.git
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
 
 SPEC CHECKSUMS:
+  AAChartKit: 873cb452021d544100bac8f82f2002be0d6630b0
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
+  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e16c02ad25370de4b61e56aa4389f3e05ef4bd54
+PODFILE CHECKSUM: 3ed60c405cbb46282ea2f2ac2a528dfecaa7a27a
 
 COCOAPODS: 1.11.3

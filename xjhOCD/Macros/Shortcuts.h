@@ -17,4 +17,18 @@
 #define kOtherSourceOrderStoryboardWithID(__Identifier) ([[UIStoryboard storyboardWithName:@"OtherSourceOrderStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:__Identifier])
 #define kPhotoStoryboardWithID(__Identifier) ([[UIStoryboard storyboardWithName:@"XJPhotoStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:__Identifier])
 
+#define kDataManager ([DataManager sharedManager])
+#define kRemindKeyShakeHands @"kRemindKeyShakeHands"
+#define kRemindKeyDoorHandles @"kRemindKeyDoorHandles"
+#define kRemindKeyDirtyMoney @"kRemindKeyDirtyMoney"
+#define kRemindKeyDirtyObjects @"kRemindKeyDirtyObjects"
+
+// ChallengeType
+typedef NS_ENUM(NSUInteger, ChallengeType) {
+    ChallengeType_ShakingHands                    =  0,
+    ChallengeType_DoorHandles,
+    ChallengeType_DirtyMoney,
+    ChallengeType_DirtyObjects,
+    ChallengeType_AllInOne,
+};
 #endif /* Shortcuts_h */

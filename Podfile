@@ -12,4 +12,11 @@ target 'xjhOCD' do
   pod 'MBProgressHUD'
   pod 'LookinServer', :configurations => ['Debug']
   pod 'YYKit'
+  # https://www.mongodb.com/docs/realm-legacy/docs/objc/latest/index.html#installation
+  pod 'Realm'
+  # https://github.com/WenchaoD/FSCalendar
+  pod 'FSCalendar'
+  # https://github.com/AAChartModel/AAChartKit
+  pod 'AAChartKit', :git => 'https://github.com/AAChartModel/AAChartKit.git'
+#  https://www.cgtrader.com/free-3d-models/household/other/five-dollar-bill-usd
 end

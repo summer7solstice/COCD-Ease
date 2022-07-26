@@ -11,7 +11,7 @@
 
 - (CGRect)trackRectForBounds:(CGRect)bounds
 {
-    return CGRectMake(0, 0, CGRectGetWidth(self.frame), 27);
+    return CGRectMake(0, 0, CGRectGetWidth(self.frame), 10);
 }
 
 @end

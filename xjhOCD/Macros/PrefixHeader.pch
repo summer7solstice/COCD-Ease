@@ -14,6 +14,7 @@
 /* Category */
 #import "UIColor+Hex.h"
 #import "UIViewController+Navigation.h"
+#import "NSObject+HUD.h"
 
 /* Global Class */
 #import "BaseTabBarController.h"
@@ -36,4 +37,12 @@
 #import <Masonry/Masonry.h>
 
 #import <MBProgressHUD.h>
+
+#import "AAGlobalMacro.h"
+
+
+#import "DataManager.h"
+#import "DateUtil.h"
+#import "ChallengeModel.h"
+
 #endif /* PrefixHeader_pch */

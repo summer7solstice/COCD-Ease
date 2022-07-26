@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+RootViewController.h"
+#import <Realm/Realm.h>
 @interface AppDelegate ()
 
 @end
@@ -18,9 +19,17 @@
     
     [self initializeRootViewControllerWithApplication:application];
     
+    // setup realm database
+    [self initializeRealm];
     return YES;
 }
 
+- (void)initializeRealm
+{
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    config.fileURL = [[[config.fileURL URLByDeletingLastPathComponent]  URLByAppendingPathComponent:@"AROCD"] URLByAppendingPathExtension:@"realm"];
+    [RLMRealmConfiguration setDefaultConfiguration:config];
+}
 
 #pragma mark - UISceneSession lifecycle
 

@@ -21,9 +21,10 @@
 - (void)commonInitialize
 {
     //title格式
-    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],NSForegroundColorAttributeName:kColor_Black}];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20],NSForegroundColorAttributeName:kColor_Black}];
     //navigationView 背景色
-    [self.navigationBar setTranslucent:NO];
+//    [self.navigationBar setTranslucent:NO];
+    [self.navigationBar setBarStyle:UIBarStyleDefault];
     [self.navigationBar setBarTintColor:UIColor.whiteColor];
     
     //侧滑返回手势
@@ -45,7 +46,7 @@
         }
     }
     
-    return YES;
+    return NO;
 }
 
 #pragma mark - UINavigationControllerDelegate

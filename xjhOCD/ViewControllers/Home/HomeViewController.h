@@ -7,10 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "CustomTabBar.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : BaseViewController<CustomTabBarDelegate>
+@interface HomeViewController : BaseViewController
 
 @end
 

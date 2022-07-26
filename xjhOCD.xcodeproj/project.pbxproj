@@ -28,17 +28,26 @@
 		BB6403962857E4DE000C9857 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6403952857E4DE000C9857 /* HomeStoryboard.storyboard */; };
 		BB64039D2858E27C000C9857 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64039C2858E27C000C9857 /* CustomTabBar.m */; };
 		BB6403A02858FAC6000C9857 /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64039E2858FAC6000C9857 /* UIView+Radius.m */; };
-		BB6403A428593A74000C9857 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403A328593A74000C9857 /* HomeHeaderView.m */; };
-		BB6403AC285A161A000C9857 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403AB285A161A000C9857 /* HomeViewModel.m */; };
-		BB6403B0285A272E000C9857 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403AE285A272E000C9857 /* HomeCollectionViewCell.m */; };
-		BB6403B1285A272E000C9857 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6403AF285A272E000C9857 /* HomeCollectionViewCell.xib */; };
-		BB6403B5285A2927000C9857 /* QuickAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403B4285A2927000C9857 /* QuickAccessViewController.m */; };
-		BB6403B8285A29EC000C9857 /* QuickAccessHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403B7285A29EC000C9857 /* QuickAccessHeaderView.m */; };
 		BB6403BF285A2FDC000C9857 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403BE285A2FDC000C9857 /* UIViewController+Navigation.m */; };
-		BB6403C4285A39B8000C9857 /* MoodTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403C3285A39B8000C9857 /* MoodTrackerViewController.m */; };
 		BB6403C7285B736F000C9857 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403C6285B736F000C9857 /* CustomSlider.m */; };
-		BB7D47912860B42900797C08 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7D47902860B42900797C08 /* ARViewController.m */; };
 		BB7D47932860B47C00797C08 /* ARAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D47922860B47C00797C08 /* ARAssets.scnassets */; };
+		BB7D4798286DEF0E00797C08 /* ChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7D4797286DEF0E00797C08 /* ChartsViewController.m */; };
+		BB7D479B286DEF1B00797C08 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7D479A286DEF1B00797C08 /* StatsViewController.m */; };
+		BB7D479F286F007200797C08 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7D479E286F007200797C08 /* DataManager.m */; };
+		BB8769DD2885956B001FC5A7 /* ChallengeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8769DC2885956B001FC5A7 /* ChallengeModel.m */; };
+		BB8769E028859664001FC5A7 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8769DE28859664001FC5A7 /* DateUtil.m */; };
+		BB8769E32885A141001FC5A7 /* EvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8769E22885A141001FC5A7 /* EvaluationViewController.m */; };
+		BB913B1D28807C9D00FF7929 /* LaunchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B1C28807C9D00FF7929 /* LaunchingViewController.m */; };
+		BB913B2028807E1A00FF7929 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B1F28807E1A00FF7929 /* UIButton+CountDown.m */; };
+		BB913B232881A40800FF7929 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B222881A40800FF7929 /* LineChartViewController.m */; };
+		BB913B262881C65800FF7929 /* AR3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B252881C65800FF7929 /* AR3DViewController.m */; };
+		BB913B292881C75900FF7929 /* AR2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B282881C75900FF7929 /* AR2DViewController.m */; };
+		BB913B532881C82500FF7929 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = BB913B502881C82400FF7929 /* Scene.m */; };
+		BB913B542881C82500FF7929 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BB913B512881C82500FF7929 /* Scene.sks */; };
+		BBD2DD5D2889843200ECE452 /* EvaluationPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2DD5C2889843200ECE452 /* EvaluationPopViewController.m */; };
+		BBD2DD602889990200ECE452 /* DailyReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2DD5F2889990200ECE452 /* DailyReportViewController.m */; };
+		BBE18283288ED058006E4FD7 /* ARGestureControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE18282288ED058006E4FD7 /* ARGestureControl.m */; };
+		BBEFD1B3288706D300FF2FDD /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEFD1B1288706D200FF2FDD /* NSObject+HUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,26 +94,44 @@
 		BB64039C2858E27C000C9857 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
 		BB64039E2858FAC6000C9857 /* UIView+Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
 		BB64039F2858FAC6000C9857 /* UIView+Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radius.h"; sourceTree = "<group>"; };
-		BB6403A228593A74000C9857 /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
-		BB6403A328593A74000C9857 /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
-		BB6403AA285A161A000C9857 /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
-		BB6403AB285A161A000C9857 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
-		BB6403AD285A272E000C9857 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
-		BB6403AE285A272E000C9857 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
-		BB6403AF285A272E000C9857 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		BB6403B3285A2927000C9857 /* QuickAccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickAccessViewController.h; sourceTree = "<group>"; };
-		BB6403B4285A2927000C9857 /* QuickAccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickAccessViewController.m; sourceTree = "<group>"; };
-		BB6403B6285A29EC000C9857 /* QuickAccessHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickAccessHeaderView.h; sourceTree = "<group>"; };
-		BB6403B7285A29EC000C9857 /* QuickAccessHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickAccessHeaderView.m; sourceTree = "<group>"; };
 		BB6403BD285A2FDC000C9857 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		BB6403BE285A2FDC000C9857 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
-		BB6403C2285A39B8000C9857 /* MoodTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoodTrackerViewController.h; sourceTree = "<group>"; };
-		BB6403C3285A39B8000C9857 /* MoodTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoodTrackerViewController.m; sourceTree = "<group>"; };
 		BB6403C5285B736F000C9857 /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
 		BB6403C6285B736F000C9857 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
-		BB7D478F2860B42900797C08 /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
-		BB7D47902860B42900797C08 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		BB7D47922860B47C00797C08 /* ARAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARAssets.scnassets; sourceTree = "<group>"; };
+		BB7D4796286DEF0E00797C08 /* ChartsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartsViewController.h; sourceTree = "<group>"; };
+		BB7D4797286DEF0E00797C08 /* ChartsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartsViewController.m; sourceTree = "<group>"; };
+		BB7D4799286DEF1B00797C08 /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		BB7D479A286DEF1B00797C08 /* StatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		BB7D479D286F007200797C08 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		BB7D479E286F007200797C08 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		BB8769DB2885956B001FC5A7 /* ChallengeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeModel.h; sourceTree = "<group>"; };
+		BB8769DC2885956B001FC5A7 /* ChallengeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeModel.m; sourceTree = "<group>"; };
+		BB8769DE28859664001FC5A7 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		BB8769DF28859664001FC5A7 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		BB8769E12885A141001FC5A7 /* EvaluationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationViewController.h; sourceTree = "<group>"; };
+		BB8769E22885A141001FC5A7 /* EvaluationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvaluationViewController.m; sourceTree = "<group>"; };
+		BB913B1B28807C9D00FF7929 /* LaunchingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchingViewController.h; sourceTree = "<group>"; };
+		BB913B1C28807C9D00FF7929 /* LaunchingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchingViewController.m; sourceTree = "<group>"; };
+		BB913B1E28807E1A00FF7929 /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
+		BB913B1F28807E1A00FF7929 /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		BB913B212881A40800FF7929 /* LineChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartViewController.h; sourceTree = "<group>"; };
+		BB913B222881A40800FF7929 /* LineChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
+		BB913B242881C65800FF7929 /* AR3DViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AR3DViewController.h; sourceTree = "<group>"; };
+		BB913B252881C65800FF7929 /* AR3DViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AR3DViewController.m; sourceTree = "<group>"; };
+		BB913B272881C75900FF7929 /* AR2DViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AR2DViewController.h; sourceTree = "<group>"; };
+		BB913B282881C75900FF7929 /* AR2DViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AR2DViewController.m; sourceTree = "<group>"; };
+		BB913B502881C82400FF7929 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		BB913B512881C82500FF7929 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		BB913B522881C82500FF7929 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		BBD2DD5B2889843200ECE452 /* EvaluationPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationPopViewController.h; sourceTree = "<group>"; };
+		BBD2DD5C2889843200ECE452 /* EvaluationPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvaluationPopViewController.m; sourceTree = "<group>"; };
+		BBD2DD5E2889990200ECE452 /* DailyReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyReportViewController.h; sourceTree = "<group>"; };
+		BBD2DD5F2889990200ECE452 /* DailyReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyReportViewController.m; sourceTree = "<group>"; };
+		BBE18281288ED057006E4FD7 /* ARGestureControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGestureControl.h; sourceTree = "<group>"; };
+		BBE18282288ED058006E4FD7 /* ARGestureControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGestureControl.m; sourceTree = "<group>"; };
+		BBEFD1B1288706D200FF2FDD /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		BBEFD1B2288706D300FF2FDD /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		D224D2381C88C049176F90A9 /* Pods_xjhOCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjhOCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +208,12 @@
 		BB1D2F172857531000755809 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				BBEFD1B2288706D300FF2FDD /* NSObject+HUD.h */,
+				BBEFD1B1288706D200FF2FDD /* NSObject+HUD.m */,
+				BB8769DF28859664001FC5A7 /* DateUtil.h */,
+				BB8769DE28859664001FC5A7 /* DateUtil.m */,
+				BB913B1E28807E1A00FF7929 /* UIButton+CountDown.h */,
+				BB913B1F28807E1A00FF7929 /* UIButton+CountDown.m */,
 				BB6403BD285A2FDC000C9857 /* UIViewController+Navigation.h */,
 				BB6403BE285A2FDC000C9857 /* UIViewController+Navigation.m */,
 				BB64039F2858FAC6000C9857 /* UIView+Radius.h */,
@@ -231,10 +264,12 @@
 				BB640388285796AE000C9857 /* StoryBoards */,
 				BB64038E285797D5000C9857 /* ViewControllers */,
 				BB6403A8285A15F0000C9857 /* ViewModels */,
+				BB7D47A0286F07E900797C08 /* Models */,
 				BB1D2F172857531000755809 /* Category */,
 				BB64039A2858E270000C9857 /* CustomViews */,
 				BB1D2F1B2857538800755809 /* Macros */,
 				BB1D2F16285751BF00755809 /* Others */,
+				BB7D479C286F004A00797C08 /* Manager */,
 				BB55676B2856276400BA8498 /* Assets.xcassets */,
 				BB6403902857E404000C9857 /* media.xcassets */,
 				BB7D47922860B47C00797C08 /* ARAssets.scnassets */,
@@ -254,10 +289,10 @@
 		BB64038E285797D5000C9857 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D478E2860B41700797C08 /* AR */,
-				BB6403B2285A290B000C9857 /* QuickAccess */,
-				BB6403C1285A39A1000C9857 /* Mood Tracker */,
 				BB64038F285797FB000C9857 /* Home */,
+				BB7D4794286DEEF700797C08 /* Charts */,
+				BB7D4795286DEEF700797C08 /* Stats */,
+				BB7D478E2860B41700797C08 /* AR */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +302,12 @@
 			children = (
 				BB6403922857E445000C9857 /* HomeViewController.h */,
 				BB6403932857E445000C9857 /* HomeViewController.m */,
+				BB913B1B28807C9D00FF7929 /* LaunchingViewController.h */,
+				BB913B1C28807C9D00FF7929 /* LaunchingViewController.m */,
+				BB8769E12885A141001FC5A7 /* EvaluationViewController.h */,
+				BB8769E22885A141001FC5A7 /* EvaluationViewController.m */,
+				BBD2DD5B2889843200ECE452 /* EvaluationPopViewController.h */,
+				BBD2DD5C2889843200ECE452 /* EvaluationPopViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -286,13 +327,6 @@
 		BB6403A128593A52000C9857 /* UICollectionViewRelated */ = {
 			isa = PBXGroup;
 			children = (
-				BB6403A228593A74000C9857 /* HomeHeaderView.h */,
-				BB6403A328593A74000C9857 /* HomeHeaderView.m */,
-				BB6403AD285A272E000C9857 /* HomeCollectionViewCell.h */,
-				BB6403AE285A272E000C9857 /* HomeCollectionViewCell.m */,
-				BB6403AF285A272E000C9857 /* HomeCollectionViewCell.xib */,
-				BB6403B6285A29EC000C9857 /* QuickAccessHeaderView.h */,
-				BB6403B7285A29EC000C9857 /* QuickAccessHeaderView.m */,
 			);
 			path = UICollectionViewRelated;
 			sourceTree = "<group>";
@@ -308,37 +342,64 @@
 		BB6403A9285A1608000C9857 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BB6403AA285A161A000C9857 /* HomeViewModel.h */,
-				BB6403AB285A161A000C9857 /* HomeViewModel.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		BB6403B2285A290B000C9857 /* QuickAccess */ = {
-			isa = PBXGroup;
-			children = (
-				BB6403B3285A2927000C9857 /* QuickAccessViewController.h */,
-				BB6403B4285A2927000C9857 /* QuickAccessViewController.m */,
-			);
-			path = QuickAccess;
-			sourceTree = "<group>";
-		};
-		BB6403C1285A39A1000C9857 /* Mood Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				BB6403C2285A39B8000C9857 /* MoodTrackerViewController.h */,
-				BB6403C3285A39B8000C9857 /* MoodTrackerViewController.m */,
-			);
-			path = "Mood Tracker";
 			sourceTree = "<group>";
 		};
 		BB7D478E2860B41700797C08 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D478F2860B42900797C08 /* ARViewController.h */,
-				BB7D47902860B42900797C08 /* ARViewController.m */,
+				BBE18281288ED057006E4FD7 /* ARGestureControl.h */,
+				BBE18282288ED058006E4FD7 /* ARGestureControl.m */,
+				BB913B522881C82500FF7929 /* Scene.h */,
+				BB913B502881C82400FF7929 /* Scene.m */,
+				BB913B512881C82500FF7929 /* Scene.sks */,
+				BB913B242881C65800FF7929 /* AR3DViewController.h */,
+				BB913B252881C65800FF7929 /* AR3DViewController.m */,
+				BB913B272881C75900FF7929 /* AR2DViewController.h */,
+				BB913B282881C75900FF7929 /* AR2DViewController.m */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		BB7D4794286DEEF700797C08 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D4796286DEF0E00797C08 /* ChartsViewController.h */,
+				BB7D4797286DEF0E00797C08 /* ChartsViewController.m */,
+				BB913B212881A40800FF7929 /* LineChartViewController.h */,
+				BB913B222881A40800FF7929 /* LineChartViewController.m */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		BB7D4795286DEEF700797C08 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D4799286DEF1B00797C08 /* StatsViewController.h */,
+				BB7D479A286DEF1B00797C08 /* StatsViewController.m */,
+				BBD2DD5E2889990200ECE452 /* DailyReportViewController.h */,
+				BBD2DD5F2889990200ECE452 /* DailyReportViewController.m */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		BB7D479C286F004A00797C08 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D479D286F007200797C08 /* DataManager.h */,
+				BB7D479E286F007200797C08 /* DataManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BB7D47A0286F07E900797C08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB8769DB2885956B001FC5A7 /* ChallengeModel.h */,
+				BB8769DC2885956B001FC5A7 /* ChallengeModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D349F6BCE2FD13E46FA0F77E /* Frameworks */ = {
@@ -417,7 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6403B1285A272E000C9857 /* HomeCollectionViewCell.xib in Resources */,
+				BB913B542881C82500FF7929 /* Scene.sks in Resources */,
 				BB6403912857E404000C9857 /* media.xcassets in Resources */,
 				BB55676F2856276400BA8498 /* LaunchScreen.storyboard in Resources */,
 				BB55676C2856276400BA8498 /* Assets.xcassets in Resources */,
@@ -475,31 +536,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6403C4285A39B8000C9857 /* MoodTrackerViewController.m in Sources */,
 				BB1D2F2628578AA300755809 /* UIColor+Hex.m in Sources */,
+				BBD2DD5D2889843200ECE452 /* EvaluationPopViewController.m in Sources */,
 				BB1D2F142857517600755809 /* BaseNavigationController.m in Sources */,
+				BB7D479B286DEF1B00797C08 /* StatsViewController.m in Sources */,
+				BBEFD1B3288706D300FF2FDD /* NSObject+HUD.m in Sources */,
+				BB913B1D28807C9D00FF7929 /* LaunchingViewController.m in Sources */,
 				BB6403BF285A2FDC000C9857 /* UIViewController+Navigation.m in Sources */,
-				BB7D47912860B42900797C08 /* ARViewController.m in Sources */,
-				BB6403B8285A29EC000C9857 /* QuickAccessHeaderView.m in Sources */,
+				BB913B2028807E1A00FF7929 /* UIButton+CountDown.m in Sources */,
 				BB1D2F132857517600755809 /* BaseViewController.m in Sources */,
 				BB1D2F0F2857517600755809 /* BaseViewModel.m in Sources */,
 				BB6403C7285B736F000C9857 /* CustomSlider.m in Sources */,
-				BB6403B5285A2927000C9857 /* QuickAccessViewController.m in Sources */,
+				BB8769E028859664001FC5A7 /* DateUtil.m in Sources */,
 				BB1D2F152857517600755809 /* BaseTabBarController.m in Sources */,
+				BB8769E32885A141001FC5A7 /* EvaluationViewController.m in Sources */,
+				BB8769DD2885956B001FC5A7 /* ChallengeModel.m in Sources */,
+				BB7D479F286F007200797C08 /* DataManager.m in Sources */,
+				BBE18283288ED058006E4FD7 /* ARGestureControl.m in Sources */,
+				BB913B532881C82500FF7929 /* Scene.m in Sources */,
 				BB1D2F112857517600755809 /* BaseModel.m in Sources */,
+				BB7D4798286DEF0E00797C08 /* ChartsViewController.m in Sources */,
 				BB6403A02858FAC6000C9857 /* UIView+Radius.m in Sources */,
 				BB5567612856276200BA8498 /* AppDelegate.m in Sources */,
 				BB6403942857E445000C9857 /* HomeViewController.m in Sources */,
+				BB913B232881A40800FF7929 /* LineChartViewController.m in Sources */,
+				BBD2DD602889990200ECE452 /* DailyReportViewController.m in Sources */,
+				BB913B262881C65800FF7929 /* AR3DViewController.m in Sources */,
+				BB913B292881C75900FF7929 /* AR2DViewController.m in Sources */,
 				BB64039D2858E27C000C9857 /* CustomTabBar.m in Sources */,
-				BB6403AC285A161A000C9857 /* HomeViewModel.m in Sources */,
 				BB5567722856276400BA8498 /* main.m in Sources */,
 				BB1D2F102857517600755809 /* BaseRequestManager.m in Sources */,
-				BB6403A428593A74000C9857 /* HomeHeaderView.m in Sources */,
 				BB1D2F122857517600755809 /* BaseObject.m in Sources */,
 				BB1D2F212857554F00755809 /* Block.m in Sources */,
 				BB1D2F1A2857531D00755809 /* AppDelegate+RootViewController.m in Sources */,
 				BB5567642856276200BA8498 /* SceneDelegate.m in Sources */,
-				BB6403B0285A272E000C9857 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,10 +709,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -670,10 +741,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
