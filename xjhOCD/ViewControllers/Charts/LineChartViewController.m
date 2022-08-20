@@ -66,10 +66,10 @@
     }];
     
     AAChartModel *aaChartModel = AAChartModel.new
-    .chartTypeSet(AAChartTypeSpline)//设置图表的类型(这里以设置的为折线面积图为例)
+    .chartTypeSet(AAChartTypeLine)
     .zoomTypeSet(AAChartZoomTypeXY)
     .yAxisTitleSet(@"Seconds")
-    .dataLabelsEnabledSet(YES);//设置图表 y 轴的单位
+    .dataLabelsEnabledSet(YES);
     
     self.aaChartModel = aaChartModel;
     
@@ -128,9 +128,9 @@
             [aaChartModel setSeries:@[element]];
         }
             break;
-        case ChallengeType_DirtyObjects:
+        case ChallengeType_DirtyBugs:
         {
-            [aaChartModel setTitle:@"Dirty Objects"];
+            [aaChartModel setTitle:@"Dirty Bugs"];
             RLMResults *result = [[ChallengeModel objectsWhere:@"challengeType = '3'"] sortedResultsUsingKeyPath:@"date" ascending:YES];
             NSMutableArray *xArray = [[NSMutableArray alloc] init];
             NSMutableArray *yArray = [[NSMutableArray alloc] init];
@@ -141,7 +141,7 @@
             }
             [aaChartModel setCategories:xArray];
             AASeriesElement *element = [[AASeriesElement alloc] init];
-            element.name = @"Dirty Objects";
+            element.name = @"Dirty Bugs";
             element.data = yArray;
             [aaChartModel setSeries:@[element]];
         }
@@ -195,7 +195,7 @@
                 [yArray3 addObject:@(model.timeLength.integerValue)];
             }
             AASeriesElement *element3 = [[AASeriesElement alloc] init];
-            element3.name = @"Dirty Objects";
+            element3.name = @"Dirty Bugs";
             element3.data = yArray3;
             
             [aaChartModel setSeries:@[element0,element1,element2,element3]];
@@ -226,7 +226,7 @@
 - (IBAction)segButtonClick:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0)
     {
-        [self.aaChartModel setChartType:AAChartTypeSpline];
+        [self.aaChartModel setChartType:AAChartTypeLine];
     }
     else
     {

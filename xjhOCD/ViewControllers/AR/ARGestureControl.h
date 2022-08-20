@@ -1,9 +1,8 @@
 //
-//  ARGestureControl.h
-//  ARKit_with_ObjC
+//  AR3DViewController.h
+//  xjhOCD
 //
-//  Created by Raju on 11/7/17.
-//  Copyright © 2017 rajubd49. All rights reserved.
+//  Created by xjhuang on 15/07/2022.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,16 +1,15 @@
 //
-//  ARGestureControl.m
-//  ARKit_with_ObjC
+//  AR3DViewController.h
+//  xjhOCD
 //
-//  Created by Raju on 11/7/17.
-//  Copyright © 2017 rajubd49. All rights reserved.
+//  Created by xjhuang on 15/07/2022.
 //
 
 #import "ARGestureControl.h"
 #import "AR3DViewController.h"
 @interface ARGestureControl ()
 
-@property (nonatomic, strong) SCNHitTestResult *removeHitResult;
+//@property (nonatomic, strong) SCNHitTestResult *removeHitResult;
 @property (nonatomic, strong) ARHitTestResult *initialHitTestResult;
 @property (nonatomic, strong) SCNNode *movedObject;
 
@@ -22,18 +21,18 @@
 
 - (void)setupGestureRecognizer {
     
-    // Tap Gesture
+    // Place
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleAddObjectFrom:)];
     tapGestureRecognizer.numberOfTapsRequired = 1;
     [self.viewController.sceneView addGestureRecognizer:tapGestureRecognizer];
     
-    // Pan Press Gesture
+    // Move
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleMoveObjectFrom:)];
     [panGestureRecognizer setMaximumNumberOfTouches:1];
     [panGestureRecognizer setMinimumNumberOfTouches:1];
     [self.viewController.sceneView addGestureRecognizer:panGestureRecognizer];
     
-    // Pinch Press Gesture
+    // Scale
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleScaleObjectFrom:)];
     [self.viewController.sceneView addGestureRecognizer:pinchGestureRecognizer];
 }
@@ -75,7 +74,7 @@
             [self insertARObject:recognizer];
         }
     } else {
-        self.removeHitResult = [result firstObject];
+//        self.removeHitResult = [result firstObject];
     }
 }
 
@@ -103,14 +102,14 @@
                                     );
     [self.viewController.sceneNode addObject:node];
     [self.viewController.sceneView.scene.rootNode addChildNode:node];
-    
+    [self.viewController startCount];
 }
 
 #pragma mark - Remove AR object
 
 - (void)removeARObject:(id)sender {
     
-    [[self.removeHitResult.node parentNode] removeFromParentNode];
+//    [[self.removeHitResult.node parentNode] removeFromParentNode];
 }
 
 #pragma mark - Move/Drag AR Object

@@ -8,7 +8,7 @@
 #import "AR3DViewController.h"
 #import "EvaluationViewController.h"
 #import "ARGestureControl.h"
-
+#import <Photos/Photos.h>
 @interface AR3DViewController ()<ARSCNViewDelegate>
 
 @property (nonatomic, strong) RACDisposable *disposable;
@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
 @property (nonatomic, strong) ARGestureControl *gestureControl;
+@property (nonatomic, assign) ARPlaneDetection planeDetection;
 @end
 
 @implementation AR3DViewController
@@ -30,11 +31,15 @@
         [self startSession];
         if (self.challengeType == ChallengeType_DoorHandles)
         {
-            self.sceneName = @"ARAssets.scnassets/knorb.dae";
+//            self.sceneName = @"ARAssets.scnassets/cockroach.dae";
         }
-        else
+        else if (self.challengeType == ChallengeType_ShakingHands)
         {
-            self.sceneName = @"ARAssets.scnassets/3d-model.dae";
+//            self.sceneName = @"ARAssets.scnassets/hand4.dae";
+        }
+        else if (self.challengeType == ChallengeType_DirtyMoney)
+        {
+//            self.sceneName = @"ARAssets.scnassets/usdModelScn.scn";
         }
     }
     else
@@ -67,20 +72,19 @@
 - (void)setupUI
 {
     self.sceneView.delegate = self;
-    self.sceneView.showsStatistics = YES;
+    self.sceneView.showsStatistics = NO;
     self.sceneView.autoenablesDefaultLighting = YES;
     self.sceneView.debugOptions = SCNDebugOptionNone;
     
     SCNScene *scene = [SCNScene new];
     self.sceneView.scene = scene;
     
-    [self startCount];
 }
 
 - (void)startSession
 {
     ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
-    configuration.planeDetection = ARPlaneDetectionVertical;
+    configuration.planeDetection = self.planeDetection;
     [self.sceneView.session runWithConfiguration:configuration];
 }
 - (void)refreshSession
@@ -90,7 +94,7 @@
     }
     
     ARWorldTrackingConfiguration *configuration = [ARWorldTrackingConfiguration new];
-    configuration.planeDetection = ARPlaneDetectionVertical;
+    configuration.planeDetection = self.planeDetection;
     [self.sceneView.session runWithConfiguration:configuration options:ARSessionRunOptionResetTracking | ARSessionRunOptionRemoveExistingAnchors];
 
 }
@@ -148,6 +152,10 @@
 
 #pragma mark - Actions
 - (IBAction)finishButtonClick:(UIButton *)sender {
+    if (self.seconds == 0) {
+        [self showToastHUD:@"You havn't started the challenge, why not have a try."];
+        return;
+    }
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Do you want to finish this challenge?" message:@"The data will be stored locally." preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Keep going" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
@@ -168,6 +176,12 @@
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
 }
+- (IBAction)snapshotAction:(id)sender {
+    UIImage *image = [self.sceneView snapshot];
+    [kDataManager saveImageToLocalDevice:image];
+}
+
+
 - (NSMutableArray<SCNNode *> *)sceneNode
 {
     if (!_sceneNode)
@@ -175,5 +189,25 @@
         _sceneNode = [NSMutableArray array];
     }
     return _sceneNode;
+}
+- (ARPlaneDetection)planeDetection
+{
+    if (self.challengeType == ChallengeType_DoorHandles)
+    {
+        return ARPlaneDetectionVertical;
+    }
+    else if (self.challengeType == ChallengeType_ShakingHands)
+    {
+        return ARPlaneDetectionVertical;
+    }
+    else if (self.challengeType == ChallengeType_DirtyMoney)
+    {
+        return ARPlaneDetectionHorizontal;
+    }
+    else if (self.challengeType == ChallengeType_DirtyBugs)
+    {
+        return ARPlaneDetectionHorizontal;
+    }
+    return ARPlaneDetectionNone;
 }
 @end

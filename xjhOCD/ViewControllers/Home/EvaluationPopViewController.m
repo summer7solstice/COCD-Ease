@@ -9,6 +9,8 @@
 
 @interface EvaluationPopViewController ()
 @property (weak, nonatomic) IBOutlet UIView *baseView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+
 @end
 
 @implementation EvaluationPopViewController
@@ -27,6 +29,7 @@
 - (void)setupUI
 {
     self.view.backgroundColor = UIColor.clearColor;
+    self.scoreLabel.text = [NSString stringWithFormat:@"Your score is %ld seconds!",self.timelength];
 }
 /* 点击灰色视图dismiss */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

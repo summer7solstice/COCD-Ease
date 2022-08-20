@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EvaluationPopViewController : BaseViewController
 @property (copy, nonatomic) IntBlock block;
+@property (nonatomic, assign) NSInteger timelength;
 @end
 
 NS_ASSUME_NONNULL_END

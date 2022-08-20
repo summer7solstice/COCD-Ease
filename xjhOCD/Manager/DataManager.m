@@ -6,6 +6,8 @@
 //
 
 #import "DataManager.h"
+#import <xlsxwriter.h>
+#import <Photos/Photos.h>
 
 @implementation DataManager
 static DataManager *manager = nil;
@@ -200,5 +202,127 @@ static DataManager *manager = nil;
         [ChallengeModel createOrUpdateInDefaultRealmWithValue:model3];
         [realm commitWriteTransaction];
     }
+}
+
+#pragma mark - Save Image locally
+- (void)saveImageToLocalDevice:(UIImage *)image
+{
+    [self savePhoto:image];
+}
+- (void)savePhoto:(UIImage *)image
+{
+    //每次都会走进来
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if (status == PHAuthorizationStatusAuthorized) {
+            NSLog(@"Authorized");
+        }else{
+            NSLog(@"Denied or Restricted");
+            // 无权限 做一个友好的提示
+            UIAlertView * alart = [[UIAlertView alloc]initWithTitle:@"Please" message:@"Please grand the rights for camera \n setting>private>camera" delegate:self cancelButtonTitle:@"Sure" otherButtonTitles:nil, nil];
+            [alart show];
+            return;
+        }
+    }];
+    
+    // 1.先保存图片到【相机胶卷】
+    /// 同步执行修改操作
+    NSError *error = nil;
+    __block PHObjectPlaceholder *placeholder = nil;
+    [[PHPhotoLibrary sharedPhotoLibrary]performChangesAndWait:^{
+        placeholder =  [PHAssetChangeRequest creationRequestForAssetFromImage:image].placeholderForCreatedAsset;
+    } error:&error];
+    if (error) {
+        NSLog(@"save failed");
+        return;
+    }
+    // 2.拥有一个【自定义相册】
+    PHAssetCollection * assetCollection = [self createCollection];
+    if (assetCollection == nil) {
+        NSLog(@"collection creation failed");
+    }
+    // 3.将刚才保存到【相机胶卷】里面的图片引用到【自定义相册】
+    [[PHPhotoLibrary sharedPhotoLibrary]performChangesAndWait:^{
+        PHAssetCollectionChangeRequest *requtes = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection];
+        [requtes addAssets:@[placeholder]];
+    } error:&error];
+    if (error) {
+        NSLog(@"save failed");
+    } else {
+        NSLog(@"save successfully");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showToastHUD:@"Save successfully"];
+        });
+    }
+}
+- (PHAssetCollection *)createCollection
+{
+    //获取软件的名字作为相册的标题
+    NSString *appTitle = [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey];
+    
+    //获得所有的自定义相册
+    PHFetchResult<PHAssetCollection *> *collections = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+    for (PHAssetCollection *collection in collections) {
+        if ([collection.localizedTitle isEqualToString:appTitle]) {
+            return collection;
+        }
+    }
+    //代码执行到这里，说明还没有自定义相册
+    __block NSString *createdCollectionId = nil;
+    //创建一个新的相册
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        createdCollectionId = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:appTitle].placeholderForCreatedAssetCollection.localIdentifier;
+    } error:nil];
+    
+    if (createdCollectionId == nil) return nil;
+    // 创建完毕后再取出相册
+    return [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[createdCollectionId] options:nil].firstObject;
+}
+
+- (void)saveExcelToDevice
+{
+    // filePath
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@"data_%@.xlsx",[DateUtil getStringFromDate:[NSDate date] format:@"yyyy-MM-dd-HH-mm-ss"]]];
+    
+    // init xlsx, turning to C
+    lxw_workbook  *workbook  = workbook_new([filename UTF8String]);
+    
+    lxw_format *format = workbook_add_format(workbook);
+
+    format_set_bold(format);
+    format_set_align(format, LXW_ALIGN_LEFT);
+    format_set_align(format, LXW_ALIGN_VERTICAL_CENTER);
+    
+    NSArray *titleArray = @[@"Shaking hands",@"Door handles",@"Dirty money",@"Dirty bug"];
+    
+    [titleArray enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        // init sheet
+        lxw_worksheet *worksheet = workbook_add_worksheet(workbook, [obj UTF8String]);
+        
+        // only col 0 ~ 5 are needed
+        worksheet_set_column(worksheet, 0, 5, 40, NULL);
+        
+        // table header
+        worksheet_write_string(worksheet, 0, 0, "Challenge Type", format);
+        worksheet_write_string(worksheet, 0, 1, "Date", format);
+        worksheet_write_string(worksheet, 0, 2, "Time", format);
+        worksheet_write_string(worksheet, 0, 3, "Timelength (second)", format);
+        worksheet_write_string(worksheet, 0, 4, "Mood score (from 0 to 4, 'low' to 'high')", format);
+        worksheet_write_string(worksheet, 0, 5, "Mood string (picked by user)", format);
+        
+        // write data in
+        RLMResults *result = [[ChallengeModel objectsWhere:[NSString stringWithFormat:@"challengeType = '%ld'",idx]] sortedResultsUsingKeyPath:@"date" ascending:YES];
+        int rowIdx = 1;
+        for (ChallengeModel *model in result) {
+            worksheet_write_string(worksheet, rowIdx, 0, [obj UTF8String], format);
+            worksheet_write_string(worksheet, rowIdx, 1, [model.date UTF8String], format);
+            worksheet_write_string(worksheet, rowIdx, 2, [model.time UTF8String], format);
+            worksheet_write_string(worksheet, rowIdx, 3, [model.timeLength UTF8String], format);
+            worksheet_write_string(worksheet, rowIdx, 4, [model.moodScore UTF8String], format);
+            worksheet_write_string(worksheet, rowIdx, 5, [model.moodString UTF8String], format);
+            rowIdx ++;
+        }
+    }];
+    workbook_close(workbook);
 }
 @end

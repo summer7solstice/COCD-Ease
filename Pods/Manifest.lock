@@ -1,21 +1,7 @@
 PODS:
   - AAChartKit (7.0.0)
-  - BlocksKit (2.2.5):
-    - BlocksKit/All (= 2.2.5)
-  - BlocksKit/All (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - BlocksKit/MessageUI
-    - BlocksKit/UIKit
-  - BlocksKit/Core (2.2.5)
-  - BlocksKit/DynamicDelegate (2.2.5)
-  - BlocksKit/MessageUI (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-  - BlocksKit/UIKit (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
   - FSCalendar (2.8.4)
+  - libxlsxwriter (1.1.4)
   - LookinServer (1.0.2)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
@@ -35,8 +21,8 @@ PODS:
 
 DEPENDENCIES:
   - AAChartKit (from `https://github.com/AAChartModel/AAChartKit.git`)
-  - BlocksKit
   - FSCalendar
+  - libxlsxwriter
   - LookinServer
   - Masonry
   - MBProgressHUD
@@ -46,8 +32,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - BlocksKit
     - FSCalendar
+    - libxlsxwriter
     - LookinServer
     - Masonry
     - MBProgressHUD
@@ -71,8 +57,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AAChartKit: 873cb452021d544100bac8f82f2002be0d6630b0
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  libxlsxwriter: f9f040bb01f0aabac1adb09f27c8cf542ae9a044
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -80,6 +66,6 @@ SPEC CHECKSUMS:
   Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 3ed60c405cbb46282ea2f2ac2a528dfecaa7a27a
+PODFILE CHECKSUM: d29975c8ac9261cdfa1a8235348107b901f1c965
 
 COCOAPODS: 1.11.3

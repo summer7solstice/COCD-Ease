@@ -21,12 +21,25 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn6;
 @property (weak, nonatomic) IBOutlet UIButton *btn7;
 @property (weak, nonatomic) IBOutlet UIButton *btn8;
+@property (weak, nonatomic) IBOutlet UITextField *tf;
+
 @property (nonatomic, strong) NSArray *btnArray;
 @property (nonatomic, strong) NSArray *moodArray;
 @property (nonatomic, copy) NSString *mood;
 @end
 
 @implementation EvaluationViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +54,22 @@
     }];
     
     [self.moodSlider addTarget:self action:@selector(sliderValurChanged:forEvent:) forControlEvents:UIControlEventValueChanged];
+    
+    @weakify(self);
+    [[RACSignal combineLatest:@[
+                                self.tf.rac_textSignal,
+                                RACObserve(self.tf, text)
+                                ]] subscribeNext:^(id x) {
+        @strongify(self);
+        if (XJStringIsNotEmpty(self.tf.text))
+        {
+            [self.btnArray enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [obj setBackgroundColor:UIColor.whiteColor];
+                [obj setTitleColor:HexColor(@"#A4A9AD") forState:UIControlStateNormal];
+            }];
+            self.mood = self.tf.text;
+        }
+    }];
 }
 - (void)sliderValurChanged:(UISlider*)slider forEvent:(UIEvent*)event {
     UITouch*touchEvent = event.allTouches.allObjects[0];
@@ -121,6 +150,8 @@
     
     @weakify(self);
     EvaluationPopViewController *vc = kHomeStoryboardWithID(@"EvaluationPopViewController");
+    NSNumber *t = dict[@"timeLength"];
+    vc.timelength = t.integerValue;
     vc.block = ^(NSInteger flag) {
         @strongify(self);
         [self.navigationController popToRootViewControllerAnimated:YES];

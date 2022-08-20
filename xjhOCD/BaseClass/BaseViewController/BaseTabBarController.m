@@ -8,7 +8,6 @@
 
 #import "BaseTabBarController.h"
 #import "BaseNavigationController.h"
-#import "CustomTabBar.h"
 #import "HomeViewController.h"
 #import "ChartsViewController.h"
 #import "StatsViewController.h"

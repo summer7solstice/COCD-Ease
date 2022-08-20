@@ -39,7 +39,7 @@
 - (IBAction)button3Click:(UIButton *)sender {
     LineChartViewController *vc = kHomeStoryboardWithID(@"LineChartViewController");
     vc.hidesBottomBarWhenPushed = YES;
-    vc.challengeType = ChallengeType_DirtyObjects;
+    vc.challengeType = ChallengeType_DirtyBugs;
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)button4Click:(UIButton *)sender {

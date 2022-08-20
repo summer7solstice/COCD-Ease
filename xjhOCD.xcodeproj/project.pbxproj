@@ -18,6 +18,8 @@
 		BB1D2F1A2857531D00755809 /* AppDelegate+RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2F182857531D00755809 /* AppDelegate+RootViewController.m */; };
 		BB1D2F212857554F00755809 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2F202857554F00755809 /* Block.m */; };
 		BB1D2F2628578AA300755809 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2F2528578AA300755809 /* UIColor+Hex.m */; };
+		BB29B0632896F24800C99010 /* ModelSelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB29B0622896F24800C99010 /* ModelSelViewController.m */; };
+		BB29B0662896F29600C99010 /* ModelSelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB29B0652896F29600C99010 /* ModelSelCell.m */; };
 		BB5567612856276200BA8498 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5567602856276200BA8498 /* AppDelegate.m */; };
 		BB5567642856276200BA8498 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5567632856276200BA8498 /* SceneDelegate.m */; };
 		BB55676C2856276400BA8498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55676B2856276400BA8498 /* Assets.xcassets */; };
@@ -26,7 +28,6 @@
 		BB6403912857E404000C9857 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6403902857E404000C9857 /* media.xcassets */; };
 		BB6403942857E445000C9857 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403932857E445000C9857 /* HomeViewController.m */; };
 		BB6403962857E4DE000C9857 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6403952857E4DE000C9857 /* HomeStoryboard.storyboard */; };
-		BB64039D2858E27C000C9857 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64039C2858E27C000C9857 /* CustomTabBar.m */; };
 		BB6403A02858FAC6000C9857 /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64039E2858FAC6000C9857 /* UIView+Radius.m */; };
 		BB6403BF285A2FDC000C9857 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403BE285A2FDC000C9857 /* UIViewController+Navigation.m */; };
 		BB6403C7285B736F000C9857 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6403C6285B736F000C9857 /* CustomSlider.m */; };
@@ -77,6 +78,10 @@
 		BB1D2F2328578A5A00755809 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		BB1D2F2428578AA300755809 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		BB1D2F2528578AA300755809 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		BB29B0612896F24700C99010 /* ModelSelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelSelViewController.h; sourceTree = "<group>"; };
+		BB29B0622896F24800C99010 /* ModelSelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelSelViewController.m; sourceTree = "<group>"; };
+		BB29B0642896F29600C99010 /* ModelSelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelSelCell.h; sourceTree = "<group>"; };
+		BB29B0652896F29600C99010 /* ModelSelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelSelCell.m; sourceTree = "<group>"; };
 		BB55675C2856276200BA8498 /* xjhOCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xjhOCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55675F2856276200BA8498 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB5567602856276200BA8498 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,8 +95,6 @@
 		BB6403922857E445000C9857 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		BB6403932857E445000C9857 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BB6403952857E4DE000C9857 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
-		BB64039B2858E27C000C9857 /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
-		BB64039C2858E27C000C9857 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
 		BB64039E2858FAC6000C9857 /* UIView+Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
 		BB64039F2858FAC6000C9857 /* UIView+Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radius.h"; sourceTree = "<group>"; };
 		BB6403BD285A2FDC000C9857 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
@@ -308,6 +311,10 @@
 				BB8769E22885A141001FC5A7 /* EvaluationViewController.m */,
 				BBD2DD5B2889843200ECE452 /* EvaluationPopViewController.h */,
 				BBD2DD5C2889843200ECE452 /* EvaluationPopViewController.m */,
+				BB29B0612896F24700C99010 /* ModelSelViewController.h */,
+				BB29B0622896F24800C99010 /* ModelSelViewController.m */,
+				BB29B0642896F29600C99010 /* ModelSelCell.h */,
+				BB29B0652896F29600C99010 /* ModelSelCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -316,8 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6403A128593A52000C9857 /* UICollectionViewRelated */,
-				BB64039B2858E27C000C9857 /* CustomTabBar.h */,
-				BB64039C2858E27C000C9857 /* CustomTabBar.m */,
 				BB6403C5285B736F000C9857 /* CustomSlider.h */,
 				BB6403C6285B736F000C9857 /* CustomSlider.m */,
 			);
@@ -555,6 +560,7 @@
 				BBE18283288ED058006E4FD7 /* ARGestureControl.m in Sources */,
 				BB913B532881C82500FF7929 /* Scene.m in Sources */,
 				BB1D2F112857517600755809 /* BaseModel.m in Sources */,
+				BB29B0632896F24800C99010 /* ModelSelViewController.m in Sources */,
 				BB7D4798286DEF0E00797C08 /* ChartsViewController.m in Sources */,
 				BB6403A02858FAC6000C9857 /* UIView+Radius.m in Sources */,
 				BB5567612856276200BA8498 /* AppDelegate.m in Sources */,
@@ -563,8 +569,8 @@
 				BBD2DD602889990200ECE452 /* DailyReportViewController.m in Sources */,
 				BB913B262881C65800FF7929 /* AR3DViewController.m in Sources */,
 				BB913B292881C75900FF7929 /* AR2DViewController.m in Sources */,
-				BB64039D2858E27C000C9857 /* CustomTabBar.m in Sources */,
 				BB5567722856276400BA8498 /* main.m in Sources */,
+				BB29B0662896F29600C99010 /* ModelSelCell.m in Sources */,
 				BB1D2F102857517600755809 /* BaseRequestManager.m in Sources */,
 				BB1D2F122857517600755809 /* BaseObject.m in Sources */,
 				BB1D2F212857554F00755809 /* Block.m in Sources */,
@@ -704,12 +710,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RXM6LXEEK4;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = JHSZ8S7RH7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_CFBundleDisplayName = "COCD Ease";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to access your camera for AR functions.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like to access your photo albums so that we can save photo into.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We would like to access your photo album so that we can use photos in the app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -722,7 +732,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = anyCompany.xjhOCD;
+				PRODUCT_BUNDLE_IDENTIFIER = xjhuang.COCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -736,12 +746,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RXM6LXEEK4;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = JHSZ8S7RH7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_CFBundleDisplayName = "COCD Ease";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to access your camera for AR functions.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like to access your photo albums so that we can save photo into.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We would like to access your photo album so that we can use photos in the app.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -754,7 +768,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = anyCompany.xjhOCD;
+				PRODUCT_BUNDLE_IDENTIFIER = xjhuang.COCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;

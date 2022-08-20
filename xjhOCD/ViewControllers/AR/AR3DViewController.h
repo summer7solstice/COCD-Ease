@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) ChallengeType challengeType;
 @property (nonatomic, copy) NSString *sceneName;
 @property (nonatomic, strong) NSMutableArray<SCNNode *> *sceneNode;
+- (void)startCount;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,7 +8,7 @@ target 'xjhOCD' do
   # Pods for xjhOCD
   pod 'Masonry'
   pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
-  pod 'BlocksKit'
+#  pod 'BlocksKit'
   pod 'MBProgressHUD'
   pod 'LookinServer', :configurations => ['Debug']
   pod 'YYKit'
@@ -19,4 +19,7 @@ target 'xjhOCD' do
   # https://github.com/AAChartModel/AAChartKit
   pod 'AAChartKit', :git => 'https://github.com/AAChartModel/AAChartKit.git'
 #  https://www.cgtrader.com/free-3d-models/household/other/five-dollar-bill-usd
+  # https://github.com/jmcnamara/libxlsxwriter
+  # http://libxlsxwriter.github.io/index.html
+  pod 'libxlsxwriter'
 end

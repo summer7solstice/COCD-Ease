@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, ChallengeType) {
     ChallengeType_ShakingHands                    =  0,
     ChallengeType_DoorHandles,
     ChallengeType_DirtyMoney,
-    ChallengeType_DirtyObjects,
+    ChallengeType_DirtyBugs,
     ChallengeType_AllInOne,
 };
 #endif /* Shortcuts_h */

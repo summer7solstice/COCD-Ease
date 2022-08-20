@@ -45,11 +45,11 @@
     ChallengeModel *model3 = [ChallengeModel objectForPrimaryKey:[NSString stringWithFormat:@"%@-3",[DateUtil getStringFromDate:self.date format:@"yyyy-MM-dd"]]];
     
     NSDictionary *moodDict = @{
-        @"0"     :   @"",
-        @"1"     :   @"ic_sad_emoji",
+        @"1"     :   @"ic_unhappy_emoji",
+        @"0"     :   @"ic_sad_emoji",
         @"2"     :   @"ic_soso_emoji",
         @"3"     :   @"ic_happy_emoji",
-        @"4"     :   @""
+        @"4"     :   @"ic_fantastic_emoji"
     };
     if (!XJObjectIsNil(model0))
     {

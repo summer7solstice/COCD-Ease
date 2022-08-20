@@ -21,6 +21,7 @@
     
     // setup realm database
     [self initializeRealm];
+    
     return YES;
 }
 
