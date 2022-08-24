@@ -20,6 +20,7 @@
 		BB1D2F2628578AA300755809 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2F2528578AA300755809 /* UIColor+Hex.m */; };
 		BB29B0632896F24800C99010 /* ModelSelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB29B0622896F24800C99010 /* ModelSelViewController.m */; };
 		BB29B0662896F29600C99010 /* ModelSelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB29B0652896F29600C99010 /* ModelSelCell.m */; };
+		BB34F13828B17C75003B2382 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB34F13728B17C75003B2382 /* AlertViewController.m */; };
 		BB5567612856276200BA8498 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5567602856276200BA8498 /* AppDelegate.m */; };
 		BB5567642856276200BA8498 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5567632856276200BA8498 /* SceneDelegate.m */; };
 		BB55676C2856276400BA8498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB55676B2856276400BA8498 /* Assets.xcassets */; };
@@ -82,6 +83,8 @@
 		BB29B0622896F24800C99010 /* ModelSelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelSelViewController.m; sourceTree = "<group>"; };
 		BB29B0642896F29600C99010 /* ModelSelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelSelCell.h; sourceTree = "<group>"; };
 		BB29B0652896F29600C99010 /* ModelSelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelSelCell.m; sourceTree = "<group>"; };
+		BB34F13628B17C75003B2382 /* AlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		BB34F13728B17C75003B2382 /* AlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		BB55675C2856276200BA8498 /* xjhOCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xjhOCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB55675F2856276200BA8498 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB5567602856276200BA8498 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				BB913B252881C65800FF7929 /* AR3DViewController.m */,
 				BB913B272881C75900FF7929 /* AR2DViewController.h */,
 				BB913B282881C75900FF7929 /* AR2DViewController.m */,
+				BB34F13628B17C75003B2382 /* AlertViewController.h */,
+				BB34F13728B17C75003B2382 /* AlertViewController.m */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				BB1D2F132857517600755809 /* BaseViewController.m in Sources */,
 				BB1D2F0F2857517600755809 /* BaseViewModel.m in Sources */,
 				BB6403C7285B736F000C9857 /* CustomSlider.m in Sources */,
+				BB34F13828B17C75003B2382 /* AlertViewController.m in Sources */,
 				BB8769E028859664001FC5A7 /* DateUtil.m in Sources */,
 				BB1D2F152857517600755809 /* BaseTabBarController.m in Sources */,
 				BB8769E32885A141001FC5A7 /* EvaluationViewController.m in Sources */,
@@ -710,16 +716,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = JHSZ8S7RH7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "COCD Ease";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to access your camera for AR functions.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like to access your photo albums so that we can save photo into.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We would like to access your photo album so that we can use photos in the app.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "COCD Ease will use the camera for Augmented Reality.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "COCD Ease  requires access to Photos for saving AR snapshots.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "COCD Ease requires access to Photos for saving AR snapshots.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -746,16 +752,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = JHSZ8S7RH7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xjhOCD/Macros/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = xjhOCD/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "COCD Ease";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We would like to access your camera for AR functions.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We would like to access your photo albums so that we can save photo into.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We would like to access your photo album so that we can use photos in the app.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "COCD Ease will use the camera for Augmented Reality.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "COCD Ease  requires access to Photos for saving AR snapshots.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "COCD Ease requires access to Photos for saving AR snapshots.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;

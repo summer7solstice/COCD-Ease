@@ -8,7 +8,6 @@
 #import "LaunchingViewController.h"
 #import "UIButton+CountDown.h"
 #import "AR3DViewController.h"
-#import "AR2DViewController.h"
 #import "ModelSelViewController.h"
 
 @interface LaunchingViewController ()
@@ -16,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *guidanceLabel;
-
+@property (nonatomic, copy) NSString *content;
 
 @end
 
@@ -56,6 +55,7 @@
             [self.switchBtn setOn:kDataManager.remindShakeHands ? YES : NO animated:NO];
             
             text = @"1. Press 'start', select the hand model you like.\n2. Focus the camera on a vertical plane, detecting it.\n3. Tap screen to place the 'hand'.\n4. Scale, drag it as you like.\n5. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
+            self.content = @"1. Focus the camera on a vertical plane, detecting it.\n2. Tap screen to place the 'hand'.\n3. Scale, drag it as you like.\n4. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
         }
             break;
         case ChallengeType_DoorHandles:
@@ -63,6 +63,7 @@
             [self.switchBtn setOn:kDataManager.remindDoorHandles ? YES : NO animated:NO];
             
             text = @"1. Press 'start', select the door handle model you like.\n2. Focus the camera on a vertical plane, detecting it.\n3. Tap screen to place the 'door handle'.\n4. Scale, drag it as you like.\n5. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
+            self.content = @"1. Focus the camera on a vertical plane, detecting it.\n2. Tap screen to place the 'door handle'.\n3. Scale, drag it as you like.\n4. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
         }
             break;
         case ChallengeType_DirtyMoney:
@@ -70,6 +71,7 @@
             [self.switchBtn setOn:kDataManager.remindDirtyMoney ? YES : NO animated:NO];
             
             text = @"1. Press 'start'.\n2. Focus the camera on a horizontal plane, detecting it.\n3. Tap screen to place the 'money'.\n4. Scale, drag it as you like.\n5. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
+            self.content = @"1. Focus the camera on a horizontal plane, detecting it.\n2. Tap screen to place the 'money'.\n3. Scale, drag it as you like.\n4. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
         }
             break;
         case ChallengeType_DirtyBugs:
@@ -77,6 +79,7 @@
             [self.switchBtn setOn:kDataManager.remindDirtyObjects ? YES : NO animated:NO];
             
             text = @"1. Press 'start'.\n2. Focus the camera on a horizontal plane, detecting it.\n3. Tap screen to place the 'bug'.\n4. Scale, drag it as you like.\n5. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
+            self.content = @"1. Focus the camera on a horizontal plane, detecting it.\n2. Tap screen to place the 'bug'.\n3. Scale, drag it as you like.\n4. All ready, feel it!\nWe believe you can beat the fear! Let's gogogo!";
         }
             break;
         default:
@@ -119,6 +122,17 @@
 }
 
 - (IBAction)startButtonClick:(UIButton *)sender {
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(status == AVAuthorizationStatusAuthorized || status == AVAuthorizationStatusNotDetermined) {
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *accessDescription = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSCameraUsageDescription"];
+            [self showPermissionAlertWithDescription:accessDescription];
+        });
+        return;
+    }
+    
+    
     ModelSelViewController *vc = kHomeStoryboardWithID(@"ModelSelViewController");
     vc.modalPresentationStyle = UIModalPresentationPageSheet;
     vc.challengeType = self.challengeType;
@@ -133,6 +147,7 @@
                 AR3DViewController *vc = kHomeStoryboardWithID(@"AR3DViewController");
                 vc.challengeType = self.challengeType;
                 vc.sceneName = sceneName;
+                vc.content = self.content;
                 [self.navigationController pushViewController:vc animated:YES];
                 
             };
@@ -147,6 +162,7 @@
                 AR3DViewController *vc = kHomeStoryboardWithID(@"AR3DViewController");
                 vc.challengeType = self.challengeType;
                 vc.sceneName = sceneName;
+                vc.content = self.content;
                 [self.navigationController pushViewController:vc animated:YES];
                 
             };
@@ -158,6 +174,7 @@
             AR3DViewController *vc = kHomeStoryboardWithID(@"AR3DViewController");
             vc.challengeType = self.challengeType;
             vc.sceneName = @"ARAssets.scnassets/usdModelScn.scn";
+            vc.content = self.content;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -166,6 +183,7 @@
             AR3DViewController *vc = kHomeStoryboardWithID(@"AR3DViewController");
             vc.challengeType = self.challengeType;
             vc.sceneName = @"ARAssets.scnassets/cockroach.dae";
+            vc.content = self.content;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

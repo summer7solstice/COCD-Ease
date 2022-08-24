@@ -15,16 +15,17 @@
         //显示信息之前，先隐藏已有的HUD
         MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:XJ_MAINWINDOW animated:true];
         HUD.mode = MBProgressHUDModeText;
+        HUD.label.numberOfLines = 0;
         if (XJStringIsEmpty(string))
         {
-            HUD.detailsLabel.text = @"";
+            HUD.label.text = @"";
         }
         else
         {
-            HUD.detailsLabel.text = string;
+            HUD.label.text = string;
         }
         HUD.removeFromSuperViewOnHide = true;
-        [HUD hideAnimated:YES afterDelay:2];
+        [HUD hideAnimated:YES afterDelay:5];
     });
 }
 @end

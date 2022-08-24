@@ -23,4 +23,5 @@
 - (void)dealloc;
 - (void)hideNaviBottomLine;
 - (void)showNaviBottomLine;
+- (void)showPermissionAlertWithDescription:(NSString *)accessDescription;
 @end

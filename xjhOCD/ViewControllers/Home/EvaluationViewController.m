@@ -133,7 +133,7 @@
 - (IBAction)submitButtonClick:(UIButton *)sender {
     if (XJStringIsEmpty(self.mood))
     {
-        [self showToastHUD:@"Please select your mood."];
+        [self showToastHUD:@"Please select your mood by pressing any of the list buttons."];
         return;
     }
     

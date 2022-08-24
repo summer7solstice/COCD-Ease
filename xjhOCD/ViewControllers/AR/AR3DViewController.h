@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *sceneName;
 @property (nonatomic, strong) NSMutableArray<SCNNode *> *sceneNode;
 - (void)startCount;
+
+@property (nonatomic, copy) NSString *content;
 @end
 
 NS_ASSUME_NONNULL_END

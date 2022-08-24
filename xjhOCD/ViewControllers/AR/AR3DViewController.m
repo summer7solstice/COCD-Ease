@@ -9,6 +9,8 @@
 #import "EvaluationViewController.h"
 #import "ARGestureControl.h"
 #import <Photos/Photos.h>
+#import "AlertViewController.h"
+
 @interface AR3DViewController ()<ARSCNViewDelegate>
 
 @property (nonatomic, strong) RACDisposable *disposable;
@@ -17,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
 @property (nonatomic, strong) ARGestureControl *gestureControl;
 @property (nonatomic, assign) ARPlaneDetection planeDetection;
+@property (weak, nonatomic) IBOutlet UIButton *backToHomeButton;
+
 @end
 
 @implementation AR3DViewController
@@ -60,7 +64,9 @@
     [self endCount];
     [self.sceneView.session pause];
 }
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -135,6 +141,9 @@
 #pragma mark - Count Func
 - (void)startCount
 {
+    if (!XJObjectIsNil(self.disposable)) {
+        return;
+    }
     self.seconds = 0;
     @weakify(self);
     self.disposable = [[RACSignal interval:1.0 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
@@ -144,6 +153,7 @@
         NSInteger seconds = self.seconds % 60;
         self.timeLabel.text = [NSString stringWithFormat:@"%.2ld:%.2ld", minutes, seconds];
     }];
+    self.backToHomeButton.hidden = YES;
 }
 - (void)endCount
 {
@@ -153,7 +163,11 @@
 #pragma mark - Actions
 - (IBAction)finishButtonClick:(UIButton *)sender {
     if (self.seconds == 0) {
-        [self showToastHUD:@"You havn't started the challenge, why not have a try."];
+//        [self showToastHUD:@"You havn't started the challenge, why not have a try."];
+        AlertViewController *vc = kHomeStoryboardWithID(@"AlertViewController");
+        vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        vc.content = self.content;
+        [self presentViewController:vc animated:YES completion:NULL];
         return;
     }
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Do you want to finish this challenge?" message:@"The data will be stored locally." preferredStyle:UIAlertControllerStyleAlert];
@@ -177,8 +191,25 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 - (IBAction)snapshotAction:(id)sender {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if (status == PHAuthorizationStatusAuthorized) {
+            NSLog(@"Authorized");
+        }else{
+            NSLog(@"Denied or Restricted");
+            // 无权限 做一个友好的提示
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *accessDescription = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSPhotoLibraryUsageDescription"];
+                [self showPermissionAlertWithDescription:accessDescription];
+            });
+            return;
+        }
+    }];
+    
     UIImage *image = [self.sceneView snapshot];
     [kDataManager saveImageToLocalDevice:image];
+}
+- (IBAction)backToHomeButtonClick:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

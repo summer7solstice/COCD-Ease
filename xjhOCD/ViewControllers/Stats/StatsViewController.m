@@ -79,10 +79,18 @@
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
 {
-    DailyReportViewController *vc = kHomeStoryboardWithID(@"DailyReportViewController");
-    vc.hidesBottomBarWhenPushed = YES;
-    vc.date = date;
-    [self.navigationController pushViewController:vc animated:YES];
+    NSDate *today = [NSDate date];
+    if ([date compare:today] == NSOrderedDescending)
+    {
+        [self.calendar deselectDate:date];
+    }
+    else
+    {
+        DailyReportViewController *vc = kHomeStoryboardWithID(@"DailyReportViewController");
+        vc.hidesBottomBarWhenPushed = YES;
+        vc.date = date;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 - (IBAction)invisibleButtonClick:(UIButton *)sender {
     _count ++;
@@ -114,6 +122,7 @@
         [realm beginWriteTransaction];
         [realm deleteAllObjects];
         [realm commitWriteTransaction];
+        [self.calendar reloadData];
     }];
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];

@@ -103,4 +103,19 @@
         return false;
     }
 }
+
+- (void)showPermissionAlertWithDescription:(NSString *)accessDescription {
+    
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:accessDescription message:@"To give permission tap on 'Change Settings' button." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:cancelAction];
+    
+    UIAlertAction *settingsAction = [UIAlertAction actionWithTitle:@"Change Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}  completionHandler:nil];
+    }];
+    [alertController addAction:settingsAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 @end

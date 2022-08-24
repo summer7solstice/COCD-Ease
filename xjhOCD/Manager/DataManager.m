@@ -105,8 +105,6 @@ static DataManager *manager = nil;
         // old one
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm beginWriteTransaction];
-        
-//        ChallengeModel *oldModel = oldArray[0];
         NSInteger newTimeLength = [dict[@"timeLength"] integerValue];
         if (newTimeLength > oldModel.timeLength.integerValue)
         {
@@ -115,7 +113,6 @@ static DataManager *manager = nil;
             oldModel.moodScore = dict[@"moodScore"];
             oldModel.moodString = dict[@"moodString"];
         }
-        
         [ChallengeModel createOrUpdateInDefaultRealmWithValue:oldModel];
         [realm commitWriteTransaction];
     }
@@ -212,17 +209,19 @@ static DataManager *manager = nil;
 - (void)savePhoto:(UIImage *)image
 {
     //每次都会走进来
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-        if (status == PHAuthorizationStatusAuthorized) {
-            NSLog(@"Authorized");
-        }else{
-            NSLog(@"Denied or Restricted");
-            // 无权限 做一个友好的提示
-            UIAlertView * alart = [[UIAlertView alloc]initWithTitle:@"Please" message:@"Please grand the rights for camera \n setting>private>camera" delegate:self cancelButtonTitle:@"Sure" otherButtonTitles:nil, nil];
-            [alart show];
-            return;
-        }
-    }];
+//    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+//        if (status == PHAuthorizationStatusAuthorized) {
+//            NSLog(@"Authorized");
+//        }else{
+//            NSLog(@"Denied or Restricted");
+//            // 无权限 做一个友好的提示
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSString *accessDescription = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSPhotoLibraryUsageDescription"];
+//                [self.alertController showPermissionAlertWithDescription:accessDescription];
+//            });
+//            return;
+//        }
+//    }];
     
     // 1.先保存图片到【相机胶卷】
     /// 同步执行修改操作

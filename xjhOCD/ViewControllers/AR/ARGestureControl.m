@@ -69,12 +69,11 @@
     NSArray<SCNHitTestResult *> *result = [self.viewController.sceneView hitTest:holdPoint
                                                           options:@{SCNHitTestBoundingBoxOnlyKey: @YES, SCNHitTestFirstFoundOnlyKey: @YES}];
     if (result.count == 0) {
-        if (!self.viewController.sceneNode.count)
-        {
+//        if (!self.viewController.sceneNode.count)
+//        {
             [self insertARObject:recognizer];
-        }
+//        }
     } else {
-//        self.removeHitResult = [result firstObject];
     }
 }
 
@@ -104,14 +103,6 @@
     [self.viewController.sceneView.scene.rootNode addChildNode:node];
     [self.viewController startCount];
 }
-
-#pragma mark - Remove AR object
-
-- (void)removeARObject:(id)sender {
-    
-//    [[self.removeHitResult.node parentNode] removeFromParentNode];
-}
-
 #pragma mark - Move/Drag AR Object
 
 -(void)moveAndDragARObject:(UIPanGestureRecognizer *)recognizer {
