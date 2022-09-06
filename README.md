@@ -3,5 +3,8 @@
 # Requirements
 - iOS 12.0+
 - iPhone 6s+
-
 # Installation
+- cd the file path
+- pod install
+# Running
+
