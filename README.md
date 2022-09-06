@@ -7,4 +7,7 @@
 - cd the file path
 - pod install
 # Running
+- open the "xjhOCD.xcworkspace"
+- change the "Bundle Identifier" and "Development team"
+- run by Xcode
 
